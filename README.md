@@ -1,46 +1,185 @@
-<p align="center"><a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener"><img src="https://sourcethemes.com/academic/img/logo_200px.png" alt="Academic logo"></a></p>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ [![Gem Version](https://badge.fury.io/rb/dev-portfolio-blog.svg)](https://badge.fury.io/rb/dev-portfolio-blog)
+![](https://ruby-gem-downloads-badge.herokuapp.com/dev-portfolio-blog)
 
-# Academic Kickstart: The Template for [Academic Website Builder](https://sourcethemes.com/academic/)
+[![CodeFactor](https://www.codefactor.io/repository/github/rohitjain00/dev-portfolio-blog/badge)](https://www.codefactor.io/repository/github/rohitjain00/dev-portfolio-blog)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d0b9f1c23f564a8195a8588de7895c4c)](https://www.codacy.com/manual/rohitjain00/dev-portfolio-blog?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rohitjain00/dev-portfolio-blog&amp;utm_campaign=Badge_Grade)
 
-[**Academic**](https://github.com/gcushen/hugo-academic) makes it easy to create a beautiful website for free using Markdown, Jupyter, or RStudio. Customize anything on your site with widgets, themes, and language packs. [Check out the latest demo](https://academic-demo.netlify.com/) of what you'll get in less than 10 minutes, or [view the showcase](https://sourcethemes.com/academic/#expo).
+## Home pagespeed
 
-**Academic Kickstart** provides a minimal template to kickstart your new website.
+![GitHub PageSpeed](https://api.speedbadge.io/v1?url=therohitjain.com&showStratLabel=true)
+![GitHub PageSpeed](https://api.speedbadge.io/v1?url=therohitjain.com&strat=desktop&showStratLabel=true)
 
-- 👉 [**Get Started**](#install)
-- 📚 [View the **documentation**](https://sourcethemes.com/academic/docs/)
-- 💬 [Chat with the **Academic community**](https://spectrum.chat/academic) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@source_themes](https://twitter.com/source_themes) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithAcademic](https://twitter.com/search?q=%23MadeWithAcademic&src=typd)
-- 💡 [Request a **feature** or report a **bug**](https://github.com/gcushen/hugo-academic/issues)
-- ⬆️ **Updating?** View the [Update Guide](https://sourcethemes.com/academic/docs/update/) and [Release Notes](https://sourcethemes.com/academic/updates/)
-- :heart: **Support development** of Academic:
-  - ☕️ [**Donate a coffee**](https://paypal.me/cushen)
-  - 💵 [Become a backer on **Patreon**](https://www.patreon.com/cushen)
-  - 🖼️ [Decorate your laptop or journal with an Academic **sticker**](https://www.redbubble.com/people/neutreno/works/34387919-academic)
-  - 👕 [Wear the **T-shirt**](https://academic.threadless.com/)
-  - :woman_technologist: [**Contribute**](https://sourcethemes.com/academic/docs/contribute/)
 
-[![Screenshot](https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png)](https://github.com/gcushen/hugo-academic/)
+## Blog pagespeed
 
-## Install
+![GitHub PageSpeed](https://api.speedbadge.io/v1?url=therohitjain.com/blog&showStratLabel=true)
+![GitHub PageSpeed](https://api.speedbadge.io/v1?url=therohitjain.com/blog&strat=desktop&showStratLabel=true)
 
-You can choose from one of the following four methods to install:
 
-* [**one-click install using your web browser (recommended)**](https://sourcethemes.com/academic/docs/install/#install-with-web-browser)
-* [install on your computer using **Git** with the Command Prompt/Terminal app](https://sourcethemes.com/academic/docs/install/#install-with-git)
-* [install on your computer by downloading the **ZIP files**](https://sourcethemes.com/academic/docs/install/#install-with-zip)
-* [install on your computer with **RStudio**](https://sourcethemes.com/academic/docs/install/#install-with-rstudio)
 
-Then [personalize your new site](https://sourcethemes.com/academic/docs/get-started/).
+# dev-portfolio-blog
 
-## Ecosystem
+This is a minimal jekyll theme for writing blogs and about yourself.
 
-* **[Academic Admin](https://github.com/sourcethemes/academic-admin):** An admin tool to import publications from BibTeX or import assets for an offline site
-* **[Academic Scripts](https://github.com/sourcethemes/academic-scripts):** Scripts to help migrate content to new versions of Academic
+## features
+ 1. Google Analytics
+ 2. Dark mode
+ 3. Disqus comments
+ 4. Categorization
+ 5. Emojis Support
+ 6. Highly optimized blog
+     #### PageSpeed Insights
+     * [Home](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Ftherohitjain.com)[(therohitjain.com)](https://therohitjain.com)
+     * [Blog](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Ftherohitjain.com/blog/)[(therohitjain.com/blog/)](https://therohitjain.com/blog/)
+     * [About](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Ftherohitjain.com/about/)[(therohitjain.com/about/)](https://therohitjain.com/about/)
+
+
+## Desktop Preview
+
+![Home Page](/screenshots/Home.png?raw=true "Home View of the website")
+
+![Blog List Page](/screenshots/Blog.png?raw=true "Blog List of the website")
+
+## Mobile Preview
+
+![Home Page](/screenshots/Home-Mobile.png?raw=true "Home View of the website")
+
+![Blog List Page](/screenshots/Blog-Mobile.png?raw=true "Blog List of the website")
+
+
+## Installation
+
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "dev-portfolio-blog"
+```
+
+And add this line to your Jekyll site's `_config.yml`:
+
+```yaml
+theme: dev-portfolio-blog
+```
+
+And then execute:
+
+    $ bundle install
+
+Or install it yourself as:
+
+    $ gem install dev-portfolio-blog
+
+## Usage
+
+To start using the theme you either follow these steps or simply fork my repo https://github.com/rohitjain00/rohitjain00.github.io and update the files.
+
+### Recommended
+ Please use the theme as the plugin so that all the latest updated for this theme comes directly in your website.
+
+#### Clone the branch `master` and change the theme accordingly.
+
+
+### Starting from the beginning:
+Assuming that you started your first website based on `minima` theme from [here](https://jekyllrb.com/docs/)
+
+1. Add a `favicon.ico` to the root directory for favicon.
+
+2. Create `blog.md` in the root folder ans set its yaml parameters to
+
+```yaml
+layout: blog
+permalink: /blog/
+title: [Blog Page Title]
+pagination:
+  enabled: true
+```
+
+3. Change your `about.md` yaml parameters to following
+
+```yaml
+layout: description
+permalink: /about/
+title: About
+```
+
+3. In the `index.md` file add
+
+```yaml
+layout: home
+home_text: Text
+title: [Home Page Title]
+```
+
+4. Create a new `categories.md` file in root with following yaml parameters
+```yaml
+layout: categories
+permalink: /categories/
+title: Categories
+```
+
+4. In the `_config.yml` file add following and change accordingly
+
+Path is relative to the root directory
+```yaml
+resume_url: [PATH_TO_RESUME]
+author_name: [YOUR_NAME]
+description: [SITE_DESCRIPTION]
+url: [WEBSITE_URL]
+google_analytics: '[google analytics Id]'
+disqus:
+    shortname: [discus-shotname]
+```
+
+### Minifier
+
+Visit [Jekyll-minifier](https://github.com/digitalsparky/jekyll-minifier) and add this to your `_config.yml` file to enable minifier.
+
+### Pagination
+
+Visit [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration) and add this to your `_config.yml` file to enable pagination.
+
+### Check here [_config.yml](https://github.com/rohitjain00/rohitjain00.github.io/blob/site/_config.yml) for example config file.
+
+
+## Writing a new blog
+
+Create a new folder `_posts` in root folder if not already exists.
+
+1. Create a new markdown file in the format `yyyy-mm-dd-postname.md`
+2. Make sure that disqus's shortname is valid.
+3. Add yaml configuartion to the post
+
+```yaml
+---
+layout: post
+comments: [true | false]
+title: Hello World
+categories: [category1, category2]
+---
+Post Text.
+```
+
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at <https://github.com/rohitjain00/dev-portfolio-blog/.> This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `dev-portfolio-blog.gemspec` accordingly.
+
+### Read about the themes and how it's implemented [here](https://github.com/rohitjain00/dev-portfolio-blog/wiki/Theme-Management)
 
 ## License
 
-Copyright 2017-present [George Cushen](https://georgecushen.com).
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-Released under the [MIT](https://github.com/sourcethemes/academic-kickstart/blob/master/LICENSE.md) license.
+If you like my work, you can buy me a coffee here :smile:
 
-[![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/academic-kickstart/readme?pixel)](https://github.com/igrigorik/ga-beacon)
+<a href="https://www.buymeacoffee.com/rohitjain00" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>

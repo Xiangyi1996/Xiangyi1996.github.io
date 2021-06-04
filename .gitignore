@@ -1,6 +1,7 @@
-# IDEs
-.idea/
-
-# Hugo
-resources/
-public/
+*.gem
+.bundle
+.sass-cache
+_site
+Gemfile.lock
+vendor
+.jekyll-metadata
