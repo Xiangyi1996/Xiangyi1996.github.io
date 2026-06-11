@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Xiangyi Zhang | NVIDIA DevTech</title>
+    <meta
+      name="description"
+      content="Personal homepage of Xiangyi Zhang, Engineer Sr, Tech SW in NVIDIA DevTech, working across accelerated AI systems, LLM inference, and computer vision research."
+    />
+    <link rel="icon" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top">Xiangyi Zhang</a>
+        <nav aria-label="Primary navigation">
+          <a href="#work">Work</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="wrap hero">
+        <div class="hero-copy">
+          <p class="location">Shanghai, China</p>
+          <p class="eyebrow">Engineer Sr, Tech SW | NVIDIA DevTech</p>
+          <h1>Xiangyi Zhang builds faster, leaner paths for accelerated AI.</h1>
+          <p class="lead">
+            I am an Engineer Sr, Tech SW in the NVIDIA DevTech group. My work
+            builds on a background in LLM inference acceleration, KV cache
+            compression, heterogeneous inference, long-context serving, and
+            production-ready model systems. My earlier research spans few-shot
+            segmentation, biological image segmentation, and semi-supervised
+            learning.
+          </p>
+          <div class="button-row">
+            <a class="button" href="mailto:xiangyiz@nvidia.com">Email</a>
+            <a class="button" href="https://www.linkedin.com/in/xiangyi-zhang-01bb19185/">LinkedIn</a>
+            <a class="button" href="https://github.com/Xiangyi1996">GitHub</a>
+            <a class="button" href="https://drive.google.com/file/d/1hydT_s6e4s0b--gO02i0fExQ1WE0wDFV/view?usp=sharing">Resume</a>
+          </div>
+        </div>
+
+        <aside aria-label="Profile summary">
+          <div class="profile-frame">
+            <img src="https://avatars.githubusercontent.com/u/22722992?v=4" alt="Xiangyi Zhang" />
+          </div>
+          <dl class="stats">
+            <div>
+              <dt>Google Scholar citations</dt>
+              <dd>494</dd>
+            </div>
+            <div>
+              <dt>Current role</dt>
+              <dd>NVIDIA DevTech</dd>
+            </div>
+            <div>
+              <dt>Title</dt>
+              <dd>Engineer Sr</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="skill-band">
+        <div class="wrap skill-grid">
+          <div>
+            <h2>LLM Inference</h2>
+            <p>KV cache compression / long-context optimization / layer sharing / attention-forward separation</p>
+          </div>
+          <div>
+            <h2>Frameworks</h2>
+            <p>vLLM / HuggingFace Transformers / OpenVINO / PyTorch</p>
+          </div>
+          <div>
+            <h2>Engineering</h2>
+            <p>distributed inference / multi-GPU deployment / Docker / Linux</p>
+          </div>
+          <div>
+            <h2>Embodied AI</h2>
+            <p>VLA frameworks / ROS / Pi-0 / VLM systems</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap section" id="work">
+        <div class="section-heading">
+          <p>Current Work</p>
+          <h2>Accelerated AI systems and efficient LLM serving.</h2>
+        </div>
+        <div class="project-list">
+          <article class="project-card">
+            <p class="card-kicker">NVIDIA DevTech | Apr. 13, 2026 - Present</p>
+            <div class="project-grid">
+              <div>
+                <h3>Engineer Sr, Tech SW</h3>
+                <p>Senior software engineering role in NVIDIA's DevTech group, focused on developer-facing technical software work at the intersection of GPU acceleration, AI systems, and high-performance model deployment.</p>
+                <ul>
+                  <li>Joined NVIDIA DevTech on Apr. 13, 2026.</li>
+                  <li>Current professional focus continues around efficient AI software, inference systems, and accelerated computing.</li>
+                </ul>
+              </div>
+              <p class="tags"><span>NVIDIA</span><span>DevTech</span><span>GPU software</span><span>AI systems</span></p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="card-kicker">Intel Corporation | Aug. 2024 - Apr. 2026</p>
+            <div class="project-grid">
+              <div>
+                <h3>KV Cache Compressed Multi-Expert Collaborative Inference System</h3>
+                <p>A training-free inference stack for high-concurrency and long-context serving, combining adaptive KV cache budgeting, early-exit acceleration, clustered layer sharing, and model-specific expert routing.</p>
+                <ul>
+                  <li>Reduced memory usage by 40%+ on MMLU tasks and 30% on 128K retrieval tasks with less than 1% accuracy loss.</li>
+                  <li>Cut inference tokens by 30-50% for selected reasoning workloads while preserving full reasoning on harder cases.</li>
+                  <li>Improved multi-expert collaborative inference accuracy by 15% with routing latency under 10 ms.</li>
+                </ul>
+              </div>
+              <p class="tags"><span>vLLM</span><span>PagedAttention</span><span>PyTorch</span><span>distributed inference</span></p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="card-kicker">Intel Corporation | Oct. 2025 - Apr. 2026</p>
+            <div class="project-grid">
+              <div>
+                <h3>Heterogeneous Attention-Forward Separation Inference System</h3>
+                <p>A heterogeneous architecture that maps memory-intensive attention and KV cache work to Intel CPUs/accelerators while keeping FFN compute on NVIDIA GPUs.</p>
+                <ul>
+                  <li>Implemented cross-device pipeline overlapping to hide transmission latency.</li>
+                  <li>Built a unified inference interface for flexible hardware configurations and dynamic load balancing.</li>
+                </ul>
+              </div>
+              <p class="tags"><span>DeepSeek-V3</span><span>Qwen2.5-72B</span><span>pipeline parallelism</span></p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="card-kicker">Intel Corporation | Jul. 2021 - Mar. 2023</p>
+            <div class="project-grid">
+              <div>
+                <h3>High-Performance Inference Deployment and Optimization</h3>
+                <p>Production-focused model deployment and performance tuning across Intel Habana Gaudi, Xeon CPU, and Arc GPU platforms.</p>
+                <ul>
+                  <li>Optimized LLaMA, Qwen, Mixtral, and related large models for target hardware.</li>
+                  <li>Designed conversion, containerization, and elastic scaling pipelines for inference services.</li>
+                </ul>
+              </div>
+              <p class="tags"><span>Habana Gaudi</span><span>Xeon</span><span>Arc GPU</span><span>ONNX</span></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="white-band" id="research">
+        <div class="wrap section">
+          <div class="section-heading">
+            <p>Research</p>
+            <h2>A computer vision foundation that still shapes the systems work.</h2>
+          </div>
+          <div class="research-grid">
+            <article>
+              <p class="card-kicker">ECCV 2020 | ShanghaiTech University</p>
+              <h3>Part-aware Prototype Network for Few-shot Semantic Segmentation</h3>
+              <p>A few-shot semantic segmentation framework that preserves detailed local information with part-aware prototypes and scales to unlabeled data.</p>
+              <p class="links"><a href="https://arxiv.org/abs/2007.06309">Paper</a><a href="https://github.com/Xiangyi1996/PPNet-PyTorch">Code</a></p>
+            </article>
+            <article>
+              <p class="card-kicker">PLOS ONE | ShanghaiTech University</p>
+              <h3>Soft X-Ray beta-cell Auto-segmentation</h3>
+              <p>A deep-learning pipeline for organelle segmentation and time-dependent analysis of pancreatic beta-cell structure under glucose and Ex-4 stimulation.</p>
+              <p class="links"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0265567">Paper</a><a href="https://github.com/Xiangyi1996/Cell-Segmentation">Code</a></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap section" id="publications">
+        <div class="section-heading">
+          <p>Publications</p>
+          <h2>Selected papers, projects, and talks.</h2>
+        </div>
+        <div class="publications">
+          <article>
+            <div>
+              <h3>Fully-fused Multi-Layer Perceptrons on Intel Data Center GPUs</h3>
+              <p>Kai Yuan*, Christoph Bauinger*, Xiangyi Zhang*, et al.</p>
+              <strong>arXiv, 2024</strong>
+            </div>
+            <p><a href="https://arxiv.org/abs/2403.17607">Paper</a><a href="https://github.com/intel/tiny-dpcpp-nn">Code</a></p>
+          </article>
+          <article>
+            <div>
+              <h3>Part-aware Prototype Network for Few-shot Semantic Segmentation</h3>
+              <p>Xiangyi Zhang*, Yongfei Liu*, Songyang Zhang, Xuming He</p>
+              <strong>European Conference on Computer Vision, 2020</strong>
+            </div>
+            <p><a href="https://arxiv.org/abs/2007.06309">Paper</a><a href="https://github.com/Xiangyi1996/PPNet-PyTorch">Code</a></p>
+          </article>
+          <article>
+            <div>
+              <h3>Auto-segmentation and time-dependent systematic analysis of mesoscale cellular structure in beta-cells during insulin secretion</h3>
+              <p>Angdi Li*, Xiangyi Zhang*, Jitin Singla, Kate White, Valentina Loconte, et al.</p>
+              <strong>PLOS ONE, 2022</strong>
+            </div>
+            <p><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0265567">Paper</a><a href="https://github.com/Xiangyi1996/Cell-Segmentation">Code</a></p>
+          </article>
+          <article>
+            <div>
+              <h3>Graph transformer-based semi-supervised few-shot semantic segmentation</h3>
+              <p>Xiangyi Zhang, Bruce Zhu</p>
+              <strong>Intel AI Everywhere Conference, 2023</strong>
+            </div>
+            <p>Internal talk</p>
+          </article>
+          <article>
+            <div>
+              <h3>Neural Rendering Platform</h3>
+              <p>Xiangyi Zhang, et al.</p>
+              <strong>Intel AI Everywhere Conference, 2024</strong>
+            </div>
+            <p>Internal talk</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="white-band">
+        <div class="wrap section timeline-wrap">
+          <div class="section-heading">
+            <p>Timeline</p>
+            <h2>From vision research to accelerated AI infrastructure.</h2>
+          </div>
+          <div class="timeline">
+            <article><p>2026 - Present</p><div><h3>Engineer Sr, Tech SW, NVIDIA DevTech</h3><p>Joined NVIDIA DevTech on Apr. 13, 2026, working on senior technical software engineering for accelerated AI systems.</p></div></article>
+            <article><p>2021 - 2026</p><div><h3>LLM Inference Optimization Engineer, Intel Corporation</h3><p>LLM inference acceleration, heterogeneous deployment, KV cache compression, and high-throughput serving.</p></div></article>
+            <article><p>2020</p><div><h3>Computer Vision Intern, Microsoft Research Asia</h3><p>Worked with the Intelligent Multimedia Group on self-supervised video instance segmentation.</p></div></article>
+            <article><p>2018 - 2021</p><div><h3>M.Eng. in Computer Science, ShanghaiTech University</h3><p>Advised by Prof. Xuming He, with research in computer vision and few-shot semantic segmentation.</p></div></article>
+            <article><p>2014 - 2018</p><div><h3>B.Eng. in Information Security, Yunnan University</h3><p>Studied software, systems, and security fundamentals.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap section contact" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Interested in accelerated AI systems, efficient inference, or applied vision research?</h2>
+        </div>
+        <div class="contact-list">
+          <a href="mailto:xiangyiz@nvidia.com">Email</a>
+          <a href="https://www.linkedin.com/in/xiangyi-zhang-01bb19185/">LinkedIn</a>
+          <a href="https://github.com/Xiangyi1996">GitHub</a>
+          <a href="https://drive.google.com/file/d/1hydT_s6e4s0b--gO02i0fExQ1WE0wDFV/view?usp=sharing">Resume</a>
+          <a href="https://scholar.google.com/citations?hl=en&user=OAQH4bQAAAAJ&view_op=list_works&sortby=title">Google Scholar</a>
+          <a href="https://orcid.org/0000-0001-5680-6335">ORCID</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap footer">
+      <span>Xiangyi Zhang</span>
+      <span>Last updated Jun 2026</span>
+    </footer>
+  </body>
+</html>
