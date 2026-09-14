@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { appendFile, readFile, writeFile } from "node:fs/promises";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 
@@ -51,7 +51,23 @@ async function fetchScholarHtml() {
   return response.text();
 }
 
-const scholarHtml = await fetchScholarHtml();
+let scholarHtml;
+try {
+  scholarHtml = await fetchScholarHtml();
+} catch (error) {
+  // Scholar can deny automated requests. Keep the last known count, while
+  // allowing unrelated network, parsing, and file errors to fail normally.
+  const blocked = /Google Scholar returned HTTP (403|429)\b/.test(error.message) ||
+    (error.code === 22 && /requested URL returned error: (403|429)\b/i.test(error.stderr ?? ""));
+  if (!blocked) throw error;
+
+  const message = "Google Scholar denied access (HTTP 403/429). Citation update skipped; the existing count was preserved. No fresh count was retrieved.";
+  console.warn(`::warning::${message}`);
+  if (process.env.GITHUB_STEP_SUMMARY) {
+    await appendFile(process.env.GITHUB_STEP_SUMMARY, `${message}\n`);
+  }
+  process.exit(0);
+}
 const citationsMatch =
   scholarHtml.match(/Cited by\s+([\d,]+)/i) ??
   scholarHtml.match(/<td class="gsc_rsb_std">([\d,]+)<\/td>/i);
