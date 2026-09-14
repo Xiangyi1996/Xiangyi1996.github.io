@@ -1,185 +1,55 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
- [![Gem Version](https://badge.fury.io/rb/dev-portfolio-blog.svg)](https://badge.fury.io/rb/dev-portfolio-blog)
-![](https://ruby-gem-downloads-badge.herokuapp.com/dev-portfolio-blog)
+# Xiangyi Zhang — Personal Website
 
-[![CodeFactor](https://www.codefactor.io/repository/github/rohitjain00/dev-portfolio-blog/badge)](https://www.codefactor.io/repository/github/rohitjain00/dev-portfolio-blog)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d0b9f1c23f564a8195a8588de7895c4c)](https://www.codacy.com/manual/rohitjain00/dev-portfolio-blog?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rohitjain00/dev-portfolio-blog&amp;utm_campaign=Badge_Grade)
+Source for [xiangyi1996.github.io](https://xiangyi1996.github.io/), Xiangyi Zhang's personal homepage covering accelerated AI systems, efficient LLM inference, computer vision research, selected publications, and professional experience.
 
-## Home pagespeed
+[Website](https://xiangyi1996.github.io/) · [Google Scholar](https://scholar.google.com/citations?hl=en&user=OAQH4bQAAAAJ) · [LinkedIn](https://www.linkedin.com/in/xiangyi-zhang-01bb19185/) · [GitHub](https://github.com/Xiangyi1996)
 
-![GitHub PageSpeed](https://api.speedbadge.io/v1?url=therohitjain.com&showStratLabel=true)
-![GitHub PageSpeed](https://api.speedbadge.io/v1?url=therohitjain.com&strat=desktop&showStratLabel=true)
+## Website structure
 
+The current homepage uses plain HTML and CSS. No build step or package installation is required.
 
-## Blog pagespeed
+| File | Purpose |
+| --- | --- |
+| `index.html` | Profile, work, research, publications, timeline, and contact links |
+| `styles.css` | Website styling and responsive layout |
+| `assets/` | Local website assets |
+| `favicon.svg` | Website icon |
+| `.nojekyll` | Bypasses Jekyll processing for GitHub Pages |
+| `scripts/update-scholar-citations.mjs` | Fetches and updates the homepage citation count |
+| `.github/workflows/update-scholar-citations.yml` | Schedules citation updates and commits changed counts |
 
-![GitHub PageSpeed](https://api.speedbadge.io/v1?url=therohitjain.com/blog&showStratLabel=true)
-![GitHub PageSpeed](https://api.speedbadge.io/v1?url=therohitjain.com/blog&strat=desktop&showStratLabel=true)
+The repository also retains files from its earlier Jekyll theme, including `_layouts/`, `_includes/`, `_sass/`, and `_posts/`. They are not needed to build the current static homepage.
 
+## Local preview
 
+Clone the repository and serve its root directory with Python 3:
 
-# dev-portfolio-blog
-
-This is a minimal jekyll theme for writing blogs and about yourself.
-
-## features
- 1. Google Analytics
- 2. Dark mode
- 3. Disqus comments
- 4. Categorization
- 5. Emojis Support
- 6. Highly optimized blog
-     #### PageSpeed Insights
-     * [Home](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Ftherohitjain.com)[(therohitjain.com)](https://therohitjain.com)
-     * [Blog](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Ftherohitjain.com/blog/)[(therohitjain.com/blog/)](https://therohitjain.com/blog/)
-     * [About](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Ftherohitjain.com/about/)[(therohitjain.com/about/)](https://therohitjain.com/about/)
-
-
-## Desktop Preview
-
-![Home Page](/screenshots/Home.png?raw=true "Home View of the website")
-
-![Blog List Page](/screenshots/Blog.png?raw=true "Blog List of the website")
-
-## Mobile Preview
-
-![Home Page](/screenshots/Home-Mobile.png?raw=true "Home View of the website")
-
-![Blog List Page](/screenshots/Blog-Mobile.png?raw=true "Blog List of the website")
-
-
-## Installation
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "dev-portfolio-blog"
+```sh
+git clone https://github.com/Xiangyi1996/Xiangyi1996.github.io.git
+cd Xiangyi1996.github.io
+python3 -m http.server 8000
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+Open [localhost:8000](http://localhost:8000). Edit `index.html` for content or `styles.css` for appearance, then refresh the browser.
 
-```yaml
-theme: dev-portfolio-blog
+## Deployment
+
+GitHub Pages publishes from the root directory of the `master` branch. Commit and push changes to that branch to update the website. The `.nojekyll` file keeps publication independent of the legacy Jekyll configuration.
+
+## Google Scholar citations
+
+The **Update Google Scholar citations** workflow is scheduled every six hours, at minute 17 (UTC). GitHub Actions may delay scheduled runs. When a new count is retrieved, the script updates the `scholar-citations` element in `index.html`; the workflow commits and pushes the change only if the file differs.
+
+To request an update, open the repository's [Actions tab](https://github.com/Xiangyi1996/Xiangyi1996.github.io/actions/workflows/update-scholar-citations.yml), select **Run workflow**, and choose `master`. Alternatively, run the script locally with Node.js 22, matching the workflow:
+
+```sh
+node scripts/update-scholar-citations.mjs
 ```
 
-And then execute:
+Local execution edits `index.html` but does not commit or push it.
 
-    $ bundle install
+If Google Scholar returns **HTTP 403 or 429**, the script preserves the existing count, records a warning and an Actions summary, and exits successfully. This means the update was skipped, not that a fresh count was retrieved. Other errors, including an unrecognized page format, still fail the task. Persistent access restrictions may require manually updating the count in `index.html` after checking the Scholar profile; keep the `scholar-citations` element ID intact.
 
-Or install it yourself as:
+## Credits and license
 
-    $ gem install dev-portfolio-blog
-
-## Usage
-
-To start using the theme you either follow these steps or simply fork my repo https://github.com/rohitjain00/rohitjain00.github.io and update the files.
-
-### Recommended
- Please use the theme as the plugin so that all the latest updated for this theme comes directly in your website.
-
-#### Clone the branch `master` and change the theme accordingly.
-
-
-### Starting from the beginning:
-Assuming that you started your first website based on `minima` theme from [here](https://jekyllrb.com/docs/)
-
-1. Add a `favicon.ico` to the root directory for favicon.
-
-2. Create `blog.md` in the root folder ans set its yaml parameters to
-
-```yaml
-layout: blog
-permalink: /blog/
-title: [Blog Page Title]
-pagination:
-  enabled: true
-```
-
-3. Change your `about.md` yaml parameters to following
-
-```yaml
-layout: description
-permalink: /about/
-title: About
-```
-
-3. In the `index.md` file add
-
-```yaml
-layout: home
-home_text: Text
-title: [Home Page Title]
-```
-
-4. Create a new `categories.md` file in root with following yaml parameters
-```yaml
-layout: categories
-permalink: /categories/
-title: Categories
-```
-
-4. In the `_config.yml` file add following and change accordingly
-
-Path is relative to the root directory
-```yaml
-resume_url: [PATH_TO_RESUME]
-author_name: [YOUR_NAME]
-description: [SITE_DESCRIPTION]
-url: [WEBSITE_URL]
-google_analytics: '[google analytics Id]'
-disqus:
-    shortname: [discus-shotname]
-```
-
-### Minifier
-
-Visit [Jekyll-minifier](https://github.com/digitalsparky/jekyll-minifier) and add this to your `_config.yml` file to enable minifier.
-
-### Pagination
-
-Visit [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration) and add this to your `_config.yml` file to enable pagination.
-
-### Check here [_config.yml](https://github.com/rohitjain00/rohitjain00.github.io/blob/site/_config.yml) for example config file.
-
-
-## Writing a new blog
-
-Create a new folder `_posts` in root folder if not already exists.
-
-1. Create a new markdown file in the format `yyyy-mm-dd-postname.md`
-2. Make sure that disqus's shortname is valid.
-3. Add yaml configuartion to the post
-
-```yaml
----
-layout: post
-comments: [true | false]
-title: Hello World
-categories: [category1, category2]
----
-Post Text.
-```
-
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at <https://github.com/rohitjain00/dev-portfolio-blog/.> This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `dev-portfolio-blog.gemspec` accordingly.
-
-### Read about the themes and how it's implemented [here](https://github.com/rohitjain00/dev-portfolio-blog/wiki/Theme-Management)
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-If you like my work, you can buy me a coffee here :smile:
-
-<a href="https://www.buymeacoffee.com/rohitjain00" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+The repository originally used Rohit Jain's [dev-portfolio-blog](https://github.com/rohitjain00/dev-portfolio-blog) Jekyll theme. Its MIT license and copyright notice are retained in [LICENSE.txt](LICENSE.txt).
